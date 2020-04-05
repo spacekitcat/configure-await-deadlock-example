@@ -28,7 +28,8 @@ namespace TestApplication1.src
             }
 
             // This will use whatever SynchronzsationContext was used last.
-            // Once you doConfigureAwait(false).
+            // Once you do ConfigureAwait(false), it can't be undone until
+            // you exit the function.
             return await Task.FromResult<int>(new Random().Next());
         }
     }
